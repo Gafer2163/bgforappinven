@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <title>bg</title>
+        <meta charset="utf-8">
+        <style>
+            @keyframes move{
+                0%{
+                    background-position: 0% 50%;
+                }
+                50%{
+                    background-position: 100% 50%;
+                }
+                100%{
+                    background-position: 0% 50%;
+                }
+            }
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                background-color: black;
+            }
+            body::before{
+                background-image: linear-gradient(to right,red,orange,gold,yellow,lime,cyan,blue,purple);
+                filter: blur(10px);
+                background-size: 900%;
+                content: "";
+                position:fixed;
+                width: 100%;
+                height: 100%;
+                animation: move 8s ease-in-out infinite;
+            }
+            h1{
+                color: transparent;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>hellow</h1>
+    </body>
+</html>
